@@ -3,6 +3,9 @@ import Dropdown from './Dropdown';
 import Header from './Header';
 import RegistrationForm from './RegistrationForm';
 
+import { css } from 'aphrodite/no-important';
+import styles from './AppStyles';
+
 import './App.css';
 
 const menu = [
@@ -23,10 +26,11 @@ const menu = [
 class App extends Component {
   render() {
     return (
-      <div className="container">
+      <div className={css(styles.container)}>
         <Header items={menu}/>
         <Dropdown />
         <RegistrationForm />
+        <div className={css(styles.square)}></div>
       </div>
     );
   }
